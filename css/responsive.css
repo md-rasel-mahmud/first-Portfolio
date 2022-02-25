@@ -1,0 +1,227 @@
+
+
+                                            /* Responsive */
+
+/* For tablet */
+
+
+
+@media (max-width:1300px){
+    .clear-bg .flex{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .portfolio-full-height{
+        padding-top: 20px;
+    }
+}
+
+
+@media (max-width:1168px){
+    .services-item{
+        width: 35%;
+    }
+    .services-item p{
+        margin-left: 15%;
+    }
+    .project-discribe{
+        margin-left: 0 !important;
+    }
+    .services-item .pricing-title{
+        margin-left: 0 !important;
+    }
+    .portfolio-full-height{
+        padding-top: 30px;
+    }
+}
+
+
+
+/*smart phone Devices */
+
+
+@media (max-width:899px){
+    #home .content{
+        height: 45%;
+    }
+    #home .content h1{
+        letter-spacing: 30px;
+    }
+    #home .content a{
+        padding: 0 40px;
+    }
+    .portfolio-full-height{
+        padding-top: 40px;
+    }
+}
+
+
+@media (max-width:870px){
+    
+    #home{
+        background-position: top right;
+    }
+    #home .content {
+        width: 100%;
+        border-left: 5px solid white;
+        padding-left: 5px;
+        align-self: flex-end;
+        color: #f9f9f9;
+    }
+    .about-image{
+        width: 100%;
+        text-align: center;
+    }
+    .about-content{
+        width: 80%;
+        border-left: none;
+        padding-top: 30px;
+    }
+    .about-content h1{
+        text-align: center;
+    }
+    .about-content p{
+        text-align: left;
+    }
+
+    .contact-information{
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width:768px){
+    nav{
+        background-color: rgba(0, 0, 0, .5);
+    }
+    .scrolling-active{
+        background-color: rgba(0, 0, 0, .5);
+    }
+    .showMenubar{
+        right: 0;
+    }
+    .menubar{
+        display: block;
+        text-align: right;
+    }
+    .menubar a{
+        color: #fff;
+        font-weight: 100;
+        border: 2px solid;
+        padding: 8px;
+        border-radius: 100%;
+        position: relative;
+        transition: all .6s ease;
+        -webkit-transition: all .6s ease;
+        -moz-transition: all .6s ease;
+        -ms-transition: all .6s ease;
+    }
+    .menubar a::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        border: 3px solid #fff;
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        animation: menubar 1.5s ease infinite;
+        box-shadow: inset 0 0 5px #f8f8f8, 0 0 5px #f8f8f8;
+        transition: all .6s ease;
+        -webkit-transition: all .6s ease;
+        -moz-transition: all .6s ease;
+        -ms-transition: all .6s ease;
+    }
+    .fa-times{
+        padding: 0 2px;
+        transition: all .5s;
+        position: relative;
+        transform: rotate(360deg);
+    }
+    .fa-bars{
+        transition: all .5s;
+    }
+
+    menu ul{
+        position: fixed;
+        min-height: 100vh;
+        width: 30%;
+        background-color: rgba(0, 0, 0, .6);
+        border: 1x solid red;
+        right: -50%;
+        top: 74px;
+    }
+    menu ul li{
+        display: block;
+        padding-right: 40px;
+        margin: 20px 0;
+    }
+    .portfolio-btn{
+        display: inline;
+    }
+    #home::before{
+        background-position: right;
+    }
+    .services-item{
+        width: 100%;
+    }
+    .contact-form{
+        width: 100%;
+        float: none;
+    }
+    .contact-information {
+        width: 100%;
+        float: none;
+    }
+    form{
+        width: 100%;
+        margin-top: 100px;
+    }
+    .about-image img{
+        width: 80%;
+        height: 70%;
+    }
+    .portfolio-full-height{
+        padding-top: 70px;
+    }
+}
+
+@media (max-width:562px){
+    
+    #home .content{
+        border-left: none;   
+        height: unset;
+        padding-bottom: 10%;
+    }
+    #home .content h1{
+        font-size: 3rem;
+        text-shadow: 2.5px 2.5px 5px #000;
+    }
+    menu ul{
+        width: 50%;
+    }
+}
+
+@media (max-width:450px) {
+    #home {
+        background-position: top right 8%;
+    } 
+    .content h1{
+        font-size: 2rem;
+    }
+    .content a {
+        padding: 5px 25px;
+        font-size: 1rem;
+    }
+    #home::before{
+        background-position: center;
+    }
+    .container h1 {
+        padding: 72px 0;
+    }
+    form {
+        margin-bottom: 70px;
+    }
+
+}
+
