@@ -53,9 +53,6 @@
     .portfolio-full-height{
         padding-top: 40px;
     }
-    /* .about-content {
-        width: 50%;
-    } */
 }
 
 
@@ -191,6 +188,10 @@
     .portfolio-full-height{
         padding-top: 70px;
     }
+    #about {
+        min-height: 150vh;
+
+    }
 }
 
 @media (max-width:562px){
@@ -213,6 +214,10 @@
     #home {
         background-position: top left 8%;
     } 
+    #about {
+        background-position: top right 10%;
+
+    }
     .content h1{
         font-size: 2rem;
     }
