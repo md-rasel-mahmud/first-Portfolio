@@ -53,13 +53,16 @@
     .portfolio-full-height{
         padding-top: 40px;
     }
+    /* .about-content {
+        width: 50%;
+    } */
 }
 
 
 @media (max-width:870px){
     
     #home{
-        background-position: top right;
+        background-position:top left;
     }
     #home .content {
         width: 100%;
@@ -72,10 +75,14 @@
         width: 100%;
         text-align: center;
     }
-    .about-content{
-        width: 80%;
+    .clear-bg{
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .about-content {
+        width: 100%;
         border-left: none;
         padding-top: 30px;
+        margin: 0 1rem;
     }
     .about-content h1{
         text-align: center;
@@ -204,7 +211,7 @@
 
 @media (max-width:450px) {
     #home {
-        background-position: top right 8%;
+        background-position: top left 8%;
     } 
     .content h1{
         font-size: 2rem;
