@@ -1,11 +1,22 @@
 
 
-// Scrole background
+// scroll animation function
 
-window.addEventListener('scroll', function () {
-    let header = document.querySelector('nav');
-    header.classList.toggle('scrolling-active', window.scrollY > 0);
+function animate(selectClass,addClass) {
+    window.addEventListener('scroll', function (){
+    let header = document.querySelector(selectClass);
+    if(this.window.scrollY >= 50){
+        header.classList.add(addClass);
+    }else{
+        header.classList.remove(addClass);
+    }
+    
 })
+}
+
+// navigation animation define 
+animate('nav','scrolling-active');
+
 
 // Mobile menu 
 

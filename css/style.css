@@ -17,6 +17,8 @@
 /* site primary color  */
 :root{
     --primary-color:rgb(0, 95, 133);
+    --dark-background: #5a5a5a;
+    --secendary-color: #211f24;
 }
 
 ::selection{
@@ -29,6 +31,7 @@
     margin: 0;
     transition: all .6s ease;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 body{
     font-family: peragraph;
@@ -40,7 +43,9 @@ a{
     color: #fff;
     font-family: link;
 }
-
+a:hover{
+    color: #fff;
+}
 .unipadding{
     max-width: 85%;
     margin: 0 auto;
@@ -102,6 +107,8 @@ nav {
     flex-direction: space-around;
     justify-content: center;
     align-items: center;
+    /* background-color: rgba(0, 0, 0, .5); */
+    color: #000;
 }
 .logo{
     width: 20%;
@@ -127,6 +134,7 @@ menu{
     width: 65%;
     text-align: right;
     transition: all .6s ease;
+    
 }
 menu ul li{
     list-style: none;
@@ -143,6 +151,7 @@ menu ul li a {
 	font-size: 13px;
 	letter-spacing: 2px;
 	font-weight: 600;
+    /* color: rgb(49, 49, 49); */
 }
 menu ul li a::before {
 	content: '';
@@ -172,21 +181,22 @@ menu ul li a:active{
     color: #556b2f;
 }
 .portfolio-btn{
-    background-color: var(--primary-color);
+    background-color: transparent;
     border-radius: 30px;
     border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
     border: 3px solid var(--primary-color);
-    text-shadow: -3px 3px 10px black;
+    background: var(--primary-color);
 }
 .portfolio-btn:focus,
 .portfolio-btn:active{
-    background-color: transparent;
+    background-color: var(--primary-color);
     color: red;
 }
 .portfolio-btn:hover{
     color: #f1f1f1;
-    background-color: transparent;
+    background-color: var(--primary-color);
+
 }
 
 .portfolio-btn:hover::before,
@@ -203,14 +213,15 @@ menu ul li a:active{
     z-index: 3;
     display: flex;
     overflow: hidden;
-    background-image: url(../Images/banner-bg.jpg);
-    /* background-position: top left; */
+    background: url('../Images/Rasel-mahmud-banner-bg.jpg');
     background-repeat: no-repeat;
+    background-position: bottom center;
     background-size: cover;  
-    justify-content: flex-end;
     width: 100%;
+    
 }
-#home::after{
+
+/* #home::after{
     content: '';
     position: absolute;
     top: 0;
@@ -218,20 +229,26 @@ menu ul li a:active{
     width: 100%;
     height: 100%;
     z-index: 1; 
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .6);
+} */
+.home-content-bg{
+    display: flex;
+    width: 100%;
+    align-self: end;
+    justify-content: end;
+
 }
 
 #home .content {
-	width: 100%;
-	border-right: 5px solid white;
-	padding-right: 5px;
-	align-self: center;
+	/* width: 100%; */
+	/* padding-right: 5px; */
     color: #f9f9f9;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: start;
+    justify-self: start;
     padding-bottom: 5%;
+    height: 50vh;
 }
 #home .content p {
 	font-family: heading;
@@ -251,19 +268,20 @@ menu ul li a:active{
 	text-transform: uppercase;
 	letter-spacing: 18px;
 	font-weight: 200;
-    word-wrap: break-word;
-    text-align: right;
-    margin-right: -18px;
+    /* word-wrap: break-word; */
+    text-align: left;
+    /* margin-right: -18px;
+    margin-left: 20px; */
 }
 #home .content a {
 	padding: 0 55px;
-	background-color: transparent;
+	background-color: var(--primary-color);
 	border-radius: 40px;
 	font-size: 2rem;
 	text-transform: uppercase;
 	line-height: 60px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 	letter-spacing: 5px;
 	text-shadow: 0 0 20px black;
 	border: 5px solid var(--primary-color);
@@ -273,7 +291,7 @@ menu ul li a:active{
 #home .content a:hover,
 #home .content a:focus,
 #home .content a:active{
-    background-color: var(--primary-color);
+    background-color: transparent;
     border: 5px solid var(--primary-color);
     color: #fff;
 }
@@ -310,8 +328,19 @@ menu ul li a:active{
 	margin-top: 40px;
 	background-color: #24252a;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-}
+    overflow: hidden;
+    cursor: pointer;
 
+}
+.single-service:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 0 10px #000;
+}
+.project {
+    height: 13rem;
+    width: 100%;
+    overflow: hidden;
+}
 .section-services .single-service .part-1 {
 	padding: 40px 40px 25px;
 	border-bottom: 2px solid #1d1e23;
@@ -321,6 +350,8 @@ menu ul li a:active{
 	margin-bottom: 25px;
 	font-size: 50px;
 	color: var(--primary-color);
+    display: flex;
+    justify-content: center;
 }
 
 .section-services .single-service .part-1 .title {
@@ -342,15 +373,27 @@ menu ul li a:active{
 }
 
 .section-services .single-service .part-2 a {
-	color: #fff;
-	font-size: 14px;
-	text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: .2rem 0;
+}
+.section-services .single-service .part-2 a:hover,
+.section-services .single-service .part-2 a:focus{
+    background: var(--dark-background);
 }
 
 .section-services .single-service .part-2 a i {
 	margin-right: 10px;
 	color: var(--primary-color);
 }
+
 
 /* Services Aria End */
 
@@ -362,22 +405,11 @@ menu ul li a:active{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background-image: url(../Images/about-bg.jpg) no-repeat;
-    background-position: top right;
+    background: url(../Images/Rasel-mahmud-about-bg.jpg) no-repeat;
+    background-position: center center;
     background-size: cover;
 
 }
-/* #about::before{
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-    z-index: -5;
-    filter: blur(5px);
-} */
 .clear-bg{
     position: absolute;
     width: 100%;
@@ -405,14 +437,13 @@ menu ul li a:active{
 	border-end-end-radius: 80px;
 	border-top-right-radius: 80px;
 }
+.about-content h1{
+    padding-bottom: .5rem;
+}
 .about-content {
 	width: 50%;
 	color: #f8f8f8;
 	padding-left: 10px;
-}
-.about-content h1{
-    text-decoration: underline;
-    text-underline-offset: 5px;
 }
 .about-content p{
     padding: 5px 0;
@@ -591,11 +622,6 @@ menu ul li a:active{
     background: #211f24;
     
 }
-/* #why-me h1{
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-} */
 #why-me p{
     text-align: center;
     width: 50%;
@@ -608,13 +634,11 @@ menu ul li a:active{
 /* Contact Aria */
 
 #contact{
-    background-image: url(../Images/contact-bg.jpg);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
     z-index: 2;
     overflow: hidden;
+    background-color: black;
+
 }
 #contact::before{
     content: '';
@@ -623,8 +647,13 @@ menu ul li a:active{
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .9);
     z-index: -3;
+    filter: blur(5px);
+    background-image: url('../Images/Rasel-mahmud-contact-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+
 }
 .contact-content{
     min-height: 100vh;
@@ -632,10 +661,9 @@ menu ul li a:active{
 .contact-content h1 {
 	text-align: center;
 	font-family: heading;
-	padding: 90px 0;
+	padding-top: 90px;
+    padding-bottom: .5rem;
     color: #f1f1f1;
-    text-decoration: underline;
-    text-underline-offset: 10px;
 }
 .contact-information{
     width: 50%;
@@ -657,6 +685,20 @@ menu ul li a:active{
     font-size: 12px;
     text-shadow: 0 0 5px #000;
 }
+.contat-social-icon a i{
+    padding: 16px;
+    font-size: 2rem;
+    background-color: rgba(95, 95, 95, 0.2);
+}
+.contat-social-icon a{
+    border-radius: 50%;
+}
+.contat-social-icon a i:hover,
+.contat-social-icon a i:focus,
+.contat-social-icon a i:visited{
+    background: var(--primary-color);
+
+}
 .location {
 	line-height: 2px !important;
     cursor: text;
@@ -668,13 +710,26 @@ iframe{
 }
 
 /* contact-form */
+::placeholder { 
+    color: #ffffff9a;
+    text-shadow: 0px 0px 2px rgb(87, 87, 87);
+    opacity: 1; 
+    /* font-weight: 500; */
+  }
+  
+  :-ms-input-placeholder { 
+    color: var(--primary-color);
+  }
+  
+  ::-ms-input-placeholder { 
+    color: var(--primary-color);
+  }
 
 .contact-form{
     width: 50%;
     float: right;
  
 }
-
 
 form{
     text-align: center;
@@ -714,7 +769,7 @@ form input[name="Name"]{
     margin-top: 40px; 
 }
 form input[placeholder="Write Discribe"] {
-	border: .20px solid #666;
+	border: .20px solid #f1f1f1;
 	padding-bottom: 100px;
 	text-transform: capitalize;
 	margin-top: 20px;
@@ -805,23 +860,38 @@ form input[type="submit"]:hover{
 
 
 
-/* scrol to nav background */
 
+
+
+
+
+/* animation on scroll */
+
+
+/* navigation animation */
 .scrolling-active{
     background-color: rgba(0, 0, 0, .6);
+    color: #fff;        
 }
+
+/* service animation */
+
 
 
 /* Keyframe for animation */
 
 @keyframes menubar {
     0%{
-        opacity: 1;
+        opacity: .1;
         padding: 0;
+    }
+    50%{
+        opacity: .5;
+        padding: 17px 15px;
     }
     100%{
         opacity: 0;
-        padding: 7px;
+        padding: 25px 24px;
     }
 
 }
